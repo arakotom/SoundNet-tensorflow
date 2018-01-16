@@ -33,7 +33,7 @@ script = "python3 extract_feat.py"
 optionlist = " -m " + str(start_layer) + " -x " + str(end_layer) + " -s -p extract "
 for (i,dataset) in enumerate(data_list):
     # creating all the filename and directory path
-    file_wav = data_path + data + file_wav_list[i] + '_old.txt'
+    file_wav = data_path + data + file_wav_list[i] + '.txt'
     output = data_path + file_wav_list[i] + '/'
     dataset_dir = data_path + data_list[i]
     
