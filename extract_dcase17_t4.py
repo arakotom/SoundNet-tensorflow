@@ -40,7 +40,7 @@ file_wav_list = ['testing_set.txt','evaluation_set.txt','training_set.txt']
 
 
 
-script = "python3 extract_feat.py"
+script = "python3 -u extract_feat.py"
 optionlist = " -m " + str(start_layer) + " -x " + str(end_layer) + " -s -p extract "
 for (i,dataset) in enumerate(data_list):
     # creating all the filename and directory path
