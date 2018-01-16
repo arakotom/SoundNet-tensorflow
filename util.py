@@ -1,6 +1,5 @@
 import numpy as np
 import librosa
-import pdb
 
 local_config = {
             'batch_size': 64, 
@@ -48,7 +47,7 @@ def load_audio(audio_path, sr=None):
     # By default, librosa will resample the signal to 22050Hz(sr=None). And range in (-1., 1.)
 
     sound_sample, sr = librosa.load(audio_path, sr=sr, mono=False)
-    print(sound_sample.shape)
+    #print(sound_sample.shape)
     return sound_sample, sr
 
 
@@ -69,7 +68,7 @@ def preprocess(raw_audio, config=local_config):
     if config['phase'] != 'extract':
         raw_audio = raw_audio[:length]
     raw_audio = raw_audio[:length]
-    print(raw_audio.shape,np.max(raw_audio))
+    #print(raw_audio.shape,np.max(raw_audio))
     # Check conditions
     assert len(raw_audio.shape) == 1, "It seems this audio contains two channels, we only need the first channel"
     assert np.max(raw_audio) <= 256, "It seems this audio contains signal that exceeds 256"
