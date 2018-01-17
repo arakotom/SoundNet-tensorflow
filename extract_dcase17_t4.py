@@ -36,7 +36,7 @@ data_path_test = 'unbalanced_train_segments_testing_set_audio_formatted_and_segm
 data_path_eval = 'evaluation_set_formatted_audio_segments/'
 
 data_list = [ data_path_test, data_path_eval, data_path_train]
-file_wav_list = ['testing_set.txt','evaluation_set.txt','training_set.txt']
+file_wav_list = ['testing_set','evaluation_set','training_set']
 
 
 
@@ -45,7 +45,7 @@ script = "python3 -u extract_feat.py"
 optionlist = " -m " + str(start_layer) + " -x " + str(end_layer) + " -s -p extract "
 for (i,dataset) in enumerate(data_list):
     # creating all the filename and directory path
-    file_wav = data_path + file_wav_list[i]
+    file_wav = data_path + file_wav_list[i] + '.txt'
     output = data_path + file_wav_list[i] + '/'
     dataset_dir = data_path + data_list[i]
     
