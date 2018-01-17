@@ -12,6 +12,7 @@ ls | cat > training_set.txt  on the appropriate directory.
 
 
 
+
 @author: alain 16/01/2018
 """
 import os

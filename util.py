@@ -3,7 +3,7 @@ import librosa
 
 local_config = {
             'batch_size': 64, 
-            'load_size': 22050*10,
+            #'load_size': 22050*10,
             'phase': 'extract'
             }
 
@@ -57,8 +57,9 @@ def preprocess(raw_audio, config=local_config):
         raw_audio = raw_audio[0]
 
     # Make range [-256, 256]
-    #raw_audio *= 256.0
-    raw_audio = ((raw_audio - np.min(raw_audio))/(np.max(raw_audio) - np.min(raw_audio)) - 0.5 )*512
+    raw_audio *= 256
+    # clip the audio amplitude if necessary
+    raw_audio = np.where(np.abs(raw_audio)<256, raw_audio, np.sign(raw_audio)*256)
     # Make minimum length available
     length = config['load_size']
     if length > raw_audio.shape[0]:
