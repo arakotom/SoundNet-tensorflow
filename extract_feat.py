@@ -135,7 +135,7 @@ if __name__ == '__main__':
     sess_config.gpu_options.allow_growth = True
     with tf.Session(config=sess_config) as session:
         # Build model
-        model = Model(session, config=local_config, param_G=param_G)
+        model = Model(session, config=config, param_G=param_G)
         init = tf.global_variables_initializer()
         session.run(init)
         
