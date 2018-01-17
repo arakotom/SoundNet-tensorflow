@@ -18,8 +18,8 @@ ls | cat > training_set.txt  on the appropriate directory.
 import os
 
 # setup for the feature extraction
-start_layer = 18  # first layer to consider
-end_layer = 19    # last layer to consider
+start_layer = 16  # first layer to consider
+end_layer = 22    # last layer to consider
 sample_rate = 22050 # target sampling rate for soundnet
 load_size = 10*sample_rate #
 
