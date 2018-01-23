@@ -40,7 +40,7 @@ data_path_eval = 'evaluation_set_formatted_audio_segments/'
 
 
 data_list = [  data_path_train]
-file_wav_list = ['training_subset_100']
+file_wav_list = ['training_subset_300','training_subset_500','training_subset_1000']
 
 
 
