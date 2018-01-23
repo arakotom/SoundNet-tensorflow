@@ -35,9 +35,12 @@ data_path_train = 'unbalanced_train_segments_training_set_audio_formatted_and_se
 data_path_test = 'unbalanced_train_segments_testing_set_audio_formatted_and_segmented_downloads/'
 data_path_eval = 'evaluation_set_formatted_audio_segments/'
 
-data_list = [ data_path_test, data_path_eval, data_path_train]
-file_wav_list = ['testing_set','evaluation_set','training_set']
+#data_list = [ data_path_test, data_path_eval, data_path_train]
+#file_wav_list = ['testing_set','evaluation_set','training_set']
 
+
+data_list = [  data_path_train]
+file_wav_list = ['training_subset_100']
 
 
 
